@@ -1,5 +1,4 @@
-<?php
-$title = "Lesson 1";
+<?php $title = "Lesson 1";
 $var = "VAR";
 
 include_once 'testFunction.php';
@@ -33,6 +32,17 @@ function test()
   var_dump($x);
   ?></p>
   <p>Include test: <?= testFunction() ?></p>
+  <p>String functions test: </br>
+    <?php
+    $str = "String for testing";
+    ?>
+    <b><code><?= $str ?></code></b> is <?= strlen($str) ?> character length, has <?= str_word_count($str) ?> words in
+    it.
+    </br>
+    To UPPERCASE <b><code><?= strtoupper($str) ?></code></b>
+    </br>
+    To lowercase <b><code><?= strtolower($str) ?></code></b>
+  </p>
 </body>
 
 </html>
