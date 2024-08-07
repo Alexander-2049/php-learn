@@ -43,6 +43,15 @@ function test()
     </br>
     To lowercase <b><code><?= strtolower($str) ?></code></b>
   </p>
+  <p>
+    Working with classes:</br>
+    <?php
+    $car1 = new Car(Color::Green, new Model("Mazda", NULL));
+    $car2 = new Car(Color::Red, new Model("Opel", NULL));
+    ?>
+    $car1 is a <?= $car1->get_color() == Color::Green ? "green" : "red" ?> <?= $car1->get_model()->name ?></br>
+    $car2 is a <?= $car2->color == Color::Green ? "green" : "red" ?> <?= $car2->model->name ?>
+  </p>
 </body>
 
 </html>
